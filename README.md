@@ -2,7 +2,7 @@ Advanced Statistics Analysis
 
 The main goals of this project are to clean, analyze, and visualize data to answer various statistical questions.
 
-Project Structure
+Project Structure:
 
 ADVANCED_STATISTICS_ANALYSIS/\
 ├── configs/\
@@ -13,13 +13,13 @@ ADVANCED_STATISTICS_ANALYSIS/\
 │   └── raw/\
 │       └── Urliste_Datenerhebung_WS23_24.xlsx\
 ├── notebooks/\
-│   └── data_correction.ipynb\
+│   └── data_cleaning.ipynb\
 ├── scripts/\
 │   └── data_processor.py\
 ├── requirements.txt\
 └── README.md
 
-Setup
+Setup:
 
 1\. Clone the repository:\
    git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
@@ -30,20 +30,20 @@ Setup
 3\. Install dependencies:\
    pip install -r requirements.txt
 
-Usage
+Usage:
 
 - Data Processing:\
   Run the data_processor.py script to clean and preprocess the data.\
   python scripts/data_processor.py
 
 - Analysis and Visualization:\
-  Use the Jupyter notebook data_correction.ipynb for data analysis and visualization.\
-  jupyter notebook notebooks/data_correction.ipynb
+  Use the Jupyter notebook data_cleaning.ipynb for data analysis and visualization.\
+  jupyter notebook notebooks/data_cleaning.ipynb
 
-Contributing
+Contributing:
 
-Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
+    Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
 
-License
+License:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+    This project is licensed under the MIT License - see the LICENSE file for details.
