@@ -22,7 +22,7 @@ ADVANCED_STATISTICS_ANALYSIS/\
 Setup:
 
 1\. Clone the repository:\
-   git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
+    git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
 
 2\. Navigate to the project directory:\
    cd Advanced_Statistics_Analysis
@@ -38,7 +38,7 @@ Usage:
 
 - Analysis and Visualization:\
   Use the Jupyter notebook data_cleaning.ipynb for data analysis and visualization.\
-  jupyter notebook notebooks/data_cleaning.ipynb
+jupyter notebook notebooks/data_cleaning.ipynb
 
 Contributing:
 
