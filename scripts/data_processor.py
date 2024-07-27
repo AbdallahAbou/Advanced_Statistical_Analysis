@@ -64,6 +64,23 @@ class DataProcessor:
         logging.info(f"Applying typo corrections to {target_column}.")
         self.df[target_column] = self.df[target_column].apply(lambda x: self.correct_typos(x, compare_with_values))
 
+    def standardize_data(self, column, std_unit, rel_unit):
+        """
+        Standardize the data in the specified column to the given unit.
+        
+        Parameters:
+        column (str): The name of the column to standardize.
+        std_unit (float): The unit to standardize to (e.g., 60 for per minute).
+        rel_unit (float): The relative unit for the data (e.g., duration of the video in seconds).
+        """
+        logging.info(f"Standardizing data in column {column} to per {std_unit} seconds, relative to {rel_unit} seconds.")
+        
+        try:
+            self.df[column] = pd.to_numeric(self.df[column], errors='coerce')
+            self.df[column] = self.df[column].apply(lambda x: (x / rel_unit) * std_unit if pd.notnull(x) else x)
+        except Exception as e:
+            logging.error(f"Error standardizing data in column {column}: {e}")
+
     def is_invalid(self, value, expected_type):
         """
         Checks if a value is invalid based on its expected type.
