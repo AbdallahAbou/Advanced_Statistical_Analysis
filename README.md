@@ -46,14 +46,16 @@ pip install -r requirements.txt
 ## Usage:
 
 - Data Processing and Cleaning:
-  Run data_cleaning.ipynb to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
+
+ Run data_cleaning.ipynb to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
 
 ```bash
 jupyter notebook notebooks/data_cleaning.ipynb 
 ```
 
 - Analysis and Visualization:
-  Use the Jupyter notebook statistical_study.ipynb for data analysis and visualization.
+
+ Use the Jupyter notebook statistical_study.ipynb for data analysis and visualization.
 
 ```bash
 jupyter notebook notebooks/statistical_study.ipynb
@@ -61,8 +63,8 @@ jupyter notebook notebooks/statistical_study.ipynb
 
 ## Contributing:
 
-    Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
 
 ## License:
     
-    This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
