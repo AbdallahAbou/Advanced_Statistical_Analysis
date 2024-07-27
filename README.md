@@ -55,9 +55,9 @@ jupyter notebook notebooks/data_cleaning.ipynb
 - Analysis and Visualization:
   Use the Jupyter notebook statistical_study.ipynb for data analysis and visualization.
 
-    ```bash
-    jupyter notebook notebooks/statistical_study.ipynb
-    ```
+```bash
+jupyter notebook notebooks/statistical_study.ipynb
+```
 
 ## Contributing:
 
