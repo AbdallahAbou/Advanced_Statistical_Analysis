@@ -1,49 +1,68 @@
-Advanced Statistics Analysis
+# Advanced Statistics Analysis
 
 The main goals of this project are to clean, analyze, and visualize data to answer various statistical questions.
 
-Project Structure:
+## Project Structure:
 
-ADVANCED_STATISTICS_ANALYSIS/\
-├── configs/\
-│   └── config.py\
-├── data/\
-│   ├── clean/\
-│   │   └── cleaned_data.xlsx\
-│   └── raw/\
-│       └── Urliste_Datenerhebung_WS23_24.xlsx\
-├── notebooks/\
-│   └── data_cleaning.ipynb\
-├── scripts/\
-│   └── data_processor.py\
-├── requirements.txt\
+```
+.
+├── configs
+│   └── config.py
+├── data
+│   ├── clean
+│   │   └── cleaned_data.xlsx
+│   └── raw
+│       └── Urliste_Datenerhebung_WS23_24.xlsx
+├── notebooks
+│   ├── data_cleaning.ipynb
+│   └── statistical_study.ipynb
+├── scripts
+│   ├── data_processor.py
+│   └── statistical_analysis.py
+├── requirements.txt
 └── README.md
+```
 
-Setup:
+## Setup:
 
-1\. Clone the repository:\
+1\. Clone the repository:
+
+    ```bash
     git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
+    ```
 
-2\. Navigate to the project directory:\
-   cd Advanced_Statistics_Analysis
+2\. Navigate to the project directory:
 
-3\. Install dependencies:\
-   pip install -r requirements.txt
+    ```bash
+    cd Advanced_Statistics_Analysis
+    ```
 
-Usage:
+3\. Install dependencies:
 
-- Data Processing:\
-  Run the data_processor.py script to clean and preprocess the data.\
-  python scripts/data_processor.py
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-- Analysis and Visualization:\
-  Use the Jupyter notebook data_cleaning.ipynb for data analysis and visualization.\
-jupyter notebook notebooks/data_cleaning.ipynb
+## Usage:
 
-Contributing:
+- Data Processing and Cleaning:
+  Run data_cleaning.ipynb to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
+
+    ```bash
+    jupyter notebook notebooks/data_cleaning.ipynb 
+    ```
+
+- Analysis and Visualization:
+  Use the Jupyter notebook statistical_study.ipynb for data analysis and visualization.
+
+    ```bash
+    jupyter notebook notebooks/statistical_study.ipynb
+    ```
+
+## Contributing:
 
     Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
 
-License:
-
+## License:
+    
     This project is licensed under the MIT License - see the LICENSE file for details.
