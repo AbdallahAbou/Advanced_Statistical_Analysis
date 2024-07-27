@@ -40,6 +40,15 @@ numeric_columns = ['Gesamtgruppe', 'Gruppe', 'Alter, Jahre', 'Körpergröße, cm
 typos = ['männlich', 'weiblich', 'rechsthänder', 'linkshänder', 'beidhändig']
 
 
+columns_q1 = ['BMI', 'Ruhepuls', 'Gruppe']
+columns_q2 = ['Priorisierte Hand', 'Handlänge Rechts (cm)', 'Handlänge Links (cm)']
+columns_q3 = ['Geschlecht', 'Wassermenge (ml/Tag)']
+columns_q4 = ['Häufigkeit Blinken']
+columns_q5 = ['Geschlecht', 'Häufigkeit Blinken']
+columns_q6 = ['Körpergröße, cm', 'Luftanhalten (s)']
+columns_q7 = ['Priorisierte Hand', 'Luftanhalten (s)']
+
+
 file_path = '../data/raw/Urliste_Datenerhebung_WS23_24.xlsx'
 
 

@@ -53,3 +53,20 @@ class StatisticalAnalysis:
         # Pair plot for multiple variables
         sns.pairplot(self.df[['Körpergröße, cm', 'Gewicht, Kg', 'BMI', 'Ruhepuls']])
         plt.show()
+        
+    def generate_subset(self, columns):
+        """
+        Generate a subset of the DataFrame based on specified columns.
+        """
+        # Ensure all specified columns exist in the DataFrame
+        if not all(col in self.df.columns for col in columns):
+            missing_cols = [col for col in columns if col not in self.df.columns]
+            raise ValueError(f"Columns not found in DataFrame: {missing_cols}")
+        
+        # Filter out rows where any of the specified columns contain NaN
+        subset_df = self.df.dropna(subset=columns)
+        
+        # Filter out rows where any of the specified columns contain placeholders
+        subset_df = subset_df[~subset_df[columns].isin(['-', np.nan]).any(axis=1)]
+        
+        return subset_df
