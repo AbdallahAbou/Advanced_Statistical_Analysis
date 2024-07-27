@@ -27,30 +27,30 @@ The main goals of this project are to clean, analyze, and visualize data to answ
 
 1\. Clone the repository:
 
-    ```bash
-    git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
-    ```
+```bash
+git clone https://github.com/AbdallahAbou/Advanced_Statistics_Analysis.git
+```
 
 2\. Navigate to the project directory:
 
-    ```bash
-    cd Advanced_Statistics_Analysis
-    ```
+```bash
+cd Advanced_Statistics_Analysis
+```
 
 3\. Install dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage:
 
 - Data Processing and Cleaning:
   Run data_cleaning.ipynb to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
 
-    ```bash
-    jupyter notebook notebooks/data_cleaning.ipynb 
-    ```
+```bash
+jupyter notebook notebooks/data_cleaning.ipynb 
+```
 
 - Analysis and Visualization:
   Use the Jupyter notebook statistical_study.ipynb for data analysis and visualization.
