@@ -7,7 +7,7 @@ new_headers = [
     'Handlänge Rechts (cm)', 'Handlänge Links (cm)', 
     'Priorisierte Hand', 'Wassermenge (ml/Tag)', 
     'Stamina Rechts (s)', 'Stamina Links (s)', 
-    'Luftanhalten (s)', 'Häufigkeit Blinken'
+    'Luftanhalten (s)', 'Häufigkeit Blinzeln (/min)'
 ]
 
 expected_types = {
@@ -30,21 +30,21 @@ expected_types = {
     'Stamina Rechts (s)': 'numeric',
     'Stamina Links (s)': 'numeric',
     'Luftanhalten (s)': 'numeric',
-    'Häufigkeit Blinken': 'numeric'
+    'Häufigkeit Blinzeln (/min)': 'numeric'
 }
 
 numeric_columns = ['Gesamtgruppe', 'Gruppe', 'Alter, Jahre', 'Körpergröße, cm', 'Gewicht, Kg', 'BMI', 'Ruhepuls', 
                 'Fußlänge Rechts (cm)', 'Fußlänge Links (cm)', 'Handlänge Rechts (cm)', 'Handlänge Links (cm)', 
-                'Wassermenge (ml/Tag)', 'Stamina Rechts (s)', 'Stamina Links (s)', 'Luftanhalten (s)', 'Häufigkeit Blinken']
+                'Wassermenge (ml/Tag)', 'Stamina Rechts (s)', 'Stamina Links (s)', 'Luftanhalten (s)', 'Häufigkeit Blinzeln (/min)']
 
 typos = ['männlich', 'weiblich', 'rechsthänder', 'linkshänder', 'beidhändig']
 
 
-columns_q1 = ['BMI', 'Ruhepuls', 'Gruppe']
+columns_q1 = ['BMI', 'Ruhepuls']
 columns_q2 = ['Priorisierte Hand', 'Handlänge Rechts (cm)', 'Handlänge Links (cm)']
 columns_q3 = ['Geschlecht', 'Wassermenge (ml/Tag)']
-columns_q4 = ['Häufigkeit Blinken']
-columns_q5 = ['Geschlecht', 'Häufigkeit Blinken']
+columns_q4 = ['Häufigkeit Blinzeln (/min)']
+columns_q5 = ['Geschlecht', 'Häufigkeit Blinzeln (/min)']
 columns_q6 = ['Körpergröße, cm', 'Luftanhalten (s)']
 columns_q7 = ['Priorisierte Hand', 'Luftanhalten (s)']
 

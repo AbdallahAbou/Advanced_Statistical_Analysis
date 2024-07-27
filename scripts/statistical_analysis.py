@@ -26,7 +26,6 @@ class StatisticalAnalysis:
         print(self.df.info())
         print(self.df.describe())
 
-
     def generate_subset(self, columns):
         """
         Generate a subset of the DataFrame based on specified columns.
@@ -43,4 +42,6 @@ class StatisticalAnalysis:
         subset_df = subset_df[~subset_df[columns].isin(['-', np.nan]).any(axis=1)]
         
         # Return only the relevant columns
+        columns.append('Gruppe')
+        columns.append('Gesamtgruppe')
         return subset_df[columns]
