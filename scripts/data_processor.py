@@ -145,9 +145,8 @@ class DataProcessor:
         
         return invalid_cells
     
-    def cleanse(self):
-        valid_geschlecht = ['männlich', 'weiblich']
-        self.df = self.df[self.df['Geschlecht'].isin(valid_geschlecht)].copy()
+    def correct_column(self):
+        self.df = self.df[self.df['Geschlecht'].isin(['männlich', 'weiblich'])].copy()
 
 
     def get_invalid_rows(self, expected_types):
