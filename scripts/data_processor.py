@@ -196,13 +196,13 @@ class DataProcessor:
 
     def convert_columns_to_numeric(self, columns):
         """
-        Converts specified columns to numeric values, coercing errors to NaN.
+        Convert specified columns to numeric values, coercing errors to NaN.
         """
         logging.info("Converting specified columns to numeric values.")
-        
         for column in columns:
             self.df[column] = pd.to_numeric(self.df[column], errors='coerce')
-        return self.df
+            # Debug statement to check if the conversion worked
+            logging.debug(f"Converted {column} to numeric. Dtype: {self.df[column].dtype}")
     
     def calculate_or_correct_age(self):
         """
