@@ -242,25 +242,25 @@ class DataProcessor:
 
     
 
-    def save_to_excel(self):
+    def save_to_excel(self, save_path=config.default_save_path, save_name=config.default_name):
         """
         Saves the DataFrame to an Excel file with the default name specified in config.py.
         Ensures that date columns are saved with the correct format.
         """
-        default_name = config.default_name
-        if not default_name.endswith('.xlsx'):
-            default_name += '.xlsx'
+
+        if not save_name.endswith('.xlsx'):
+            save_name += '.xlsx'
         
         # Define the full path to save the file in the specified directory
-        save_path = os.path.join(config.save_path, default_name)
+        save = os.path.join(save_path, save_name)
 
-        logging.info(f"Saving DataFrame to {save_path}")
+        logging.info(f"Saving DataFrame to {save}")
 
         # Ensure the directory exists
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
         # Use xlsxwriter for formatting
-        xl_writer = pd.ExcelWriter(save_path, engine='xlsxwriter')
+        xl_writer = pd.ExcelWriter(save, engine='xlsxwriter')
         self.df.to_excel(xl_writer, sheet_name='data', index=False)
 
         # Get the workbook and worksheet
@@ -277,7 +277,7 @@ class DataProcessor:
         
         # Save the file
         xl_writer.close()
-        logging.info(f"DataFrame saved to {save_path}")
+        logging.info(f"DataFrame saved to {save}")
 
 
 
