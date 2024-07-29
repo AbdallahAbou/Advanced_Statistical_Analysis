@@ -17,10 +17,9 @@ class DataProcessor:
         """
         Loads data from an Excel file.
         """
-        print(os.path.abspath(__file__))
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         DATA_FILE_PATH = os.path.join(BASE_DIR, self.file_path)
-        logging.info("Loading data from Excel file.")
+        logging.info(f"Loading raw data from Excel file {self.file_path}.")
         self.df = pd.read_excel(DATA_FILE_PATH)
         return self.df
 
