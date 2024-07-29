@@ -54,10 +54,10 @@ pip install -r requirements.txt
 
 - Data Processing and Cleaning:
 
- Run data_cleaning.ipynb to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
+ Run data_cleaning.py to clean and preprocess the data, a new Excel file should be created in ./data/clean/.
 
 ```bash
-jupyter notebook notebooks/data_cleaning.ipynb 
+python src/data_cleaning.py
 ```
 
 - Analysis and Visualization:
