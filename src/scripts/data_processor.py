@@ -1,6 +1,6 @@
+
 import os
-sys.path.insert(1, os.path.abspath('../configs'))
-import config # type: ignore
+from configs import config
 import pandas as pd
 from fuzzywuzzy import process
 import logging
@@ -17,8 +17,11 @@ class DataProcessor:
         """
         Loads data from an Excel file.
         """
+        print(os.path.abspath(__file__))
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        DATA_FILE_PATH = os.path.join(BASE_DIR, self.file_path)
         logging.info("Loading data from Excel file.")
-        self.df = pd.read_excel(self.file_path)
+        self.df = pd.read_excel(DATA_FILE_PATH)
         return self.df
 
     def combine_columns(self, col1_index, col2_index):
