@@ -6,21 +6,28 @@ The main goals of this project are to clean, analyze, and visualize data to answ
 
 ```
 .
-├── configs
-│   └── config.py
 ├── data
-│   ├── clean
-│   │   └── cleaned_data.xlsx
-│   └── raw
-│       └── Urliste_Datenerhebung_WS23_24.xlsx
+│   ├── clean
+│   │   └── cleaned_data.xlsx
+│   └── raw
+│       └── Urliste_Datenerhebung_WS23_24.xlsx
 ├── notebooks
-│   ├── data_cleaning.ipynb
-│   └── statistical_study.ipynb
-├── scripts
-│   ├── data_processor.py
-│   └── statistical_analysis.py
-├── requirements.txt
-└── README.md
+│   ├── data_cleaning_notebook.ipynb
+│   └── statistical_study_notebook.ipynb
+├── src
+│   ├── configs
+│   │   ├── __init__.py
+│   │   └── config.py
+│   ├── scripts
+│   │   ├── __init__.py
+│   │   ├── data_cleaning.py
+│   │   └── data_processor.py
+│   ├── __init__.py
+│   └── data_cleaning.py
+├── .gitignore
+├── README.md
+└── requirements.txt
+
 ```
 
 ## Setup:
