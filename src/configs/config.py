@@ -53,4 +53,4 @@ file_path = '../data/raw/Urliste_Datenerhebung_WS23_24.xlsx'
 
 
 default_name = 'cleaned_data.xlsx'
-save_path = '../data/clean/'
+default_save_path = '../data/clean/'
