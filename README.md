@@ -20,8 +20,8 @@ The main goals of this project are to clean, analyze, and visualize data to answ
 │   │   └── config.py
 │   ├── scripts
 │   │   ├── __init__.py
-│   │   ├── data_cleaning.py
-│   │   └── data_processor.py
+│   │   ├── data_processor.py
+│   │   └── statistical_analysis.py
 │   ├── __init__.py
 │   └── data_cleaning.py
 ├── .gitignore
