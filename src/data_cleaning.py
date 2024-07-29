@@ -16,9 +16,9 @@ def main():
     processor.apply_corrections('Geschlecht', config.typos)
     processor.apply_corrections('Priorisierte Hand', config.typos)
 
-    df.loc[:75, 'Type'] = 'Studierende'
-    df.loc[76:, 'Type'] = 'simulierte Daten'
-    df.loc[:75, 'Gruppe'] = 1
+    processor.df.loc[:75, 'Type'] = 'Studierende'
+    processor.df.loc[76:, 'Type'] = 'simulierte Daten'
+    processor.df.loc[:75, 'Gruppe'] = 1
     
 
     processor.calculate_and_update_bmi()
