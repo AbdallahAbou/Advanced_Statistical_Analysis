@@ -44,3 +44,35 @@ class StatisticalAnalysis:
         columns.append('Gruppe')
         columns.append('Gesamtgruppe')
         return subset_df[columns]
+    
+    # Function to calculate descriptive statistics
+    def descriptive_stats(self, sub_df, columns):
+        stats = sub_df[columns].describe().transpose()
+        rounded_stats = stats.round(2)
+        return rounded_stats
+    
+    def save_as_latex(self, sub_df, save_path, file_name):
+        """
+        Save DataFrame as a LaTeX table content.
+        """
+        file_path = f"{save_path}/{file_name}.tex"
+        with open(file_path, 'w') as f:
+            for row in sub_df.itertuples():
+                row_data = f"{row[0]} & " + ' & '.join(map(str, row[1:]))
+                f.write(f"{row_data} \\\\\n")
+
+    def create_histogram(self, data, column, group_name, save_path=None):
+        plt.figure(figsize=(10, 6))
+        plt.hist(data[column], bins=20, edgecolor='black', alpha=0.7)
+        plt.title(f'Histogramm von {column} - {group_name}')
+        plt.xlabel(column)
+        plt.ylabel('Häufigkeit')
+        plt.grid(True)
+        
+        if save_path:
+            filename = f"{save_path}/histogram_{group_name}_{column}.png"
+            plt.savefig(filename)
+            return filename
+        
+        plt.show()
+        return None
